@@ -144,7 +144,7 @@ namespace WindowsFormsApp1
 					}).ToList();
 
 					listaVendas.DataSource = listaVendaComValor;
-					listaVendas.AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
+					listaVendas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 					listaVendas.ClearSelection();
 				}				
 			}

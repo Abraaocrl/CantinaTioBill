@@ -149,7 +149,8 @@ namespace WindowsFormsApp1
 				clientes = context.Clientes.ToList();
 			}
 
-			listaClientes.DataSource = clientes;			
+			listaClientes.DataSource = clientes;		
+			listaClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 			listaClientes.ClearSelection();
 		}
 

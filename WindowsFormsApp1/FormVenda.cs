@@ -227,7 +227,7 @@ namespace WindowsFormsApp1
 				Id = x.Id,
 				Quentinha = x.TipoQuentinha.Descricao,
 				Quantidade = x.Quantidade,
-				Valor = x.ValorPagoUnidade * x.Quantidade
+				Valor = (x.ValorPagoUnidade * x.Quantidade).ToString("C")
 			}).ToList();		
 
 			listaItens.DataSource = listaDadoItens;
@@ -252,7 +252,7 @@ namespace WindowsFormsApp1
 				Id = x.Id,
 				Quentinha = x.TipoQuentinha.Descricao,
 				Quantidade = x.Quantidade,
-				Valor = x.ValorPagoUnidade * x.Quantidade
+				Valor = (x.ValorPagoUnidade * x.Quantidade).ToString("C")
 			}).ToList();
 
 			string formato = "R$ 000.00";
@@ -265,7 +265,7 @@ namespace WindowsFormsApp1
 			}
 
 			listaItens.DataSource = listaDadoItens;
-			listaItens.AutoResizeColumns();
+			listaItens.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 			listaItens.ClearSelection();
 		}
 	}

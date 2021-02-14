@@ -151,7 +151,8 @@ namespace WindowsFormsApp1
 				Valor = x.Valor.ToString("C")
 			}).ToList();
 
-			listaClientes.DataSource = tipoQuentinhas;
+			listaClientes.DataSource = listaTipo;
+			listaClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 			listaClientes.ClearSelection();
 		}
 	}
